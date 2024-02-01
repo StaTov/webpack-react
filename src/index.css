@@ -1,0 +1,10 @@
+body {
+    width: 100vw;
+    margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
