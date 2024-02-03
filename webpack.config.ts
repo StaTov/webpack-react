@@ -5,6 +5,7 @@ import { TPathes, TEnvProps, TWebpackOptions } from './webpack/types';
 import wepbackBuilder from './webpack/webpackBuild';
 
 
+
 const pathes: TPathes = {
     output: path.resolve(__dirname, 'build'),
     devServer: path.resolve(__dirname, 'build'),
@@ -15,7 +16,7 @@ const pathes: TPathes = {
 
 export default (env: TEnvProps) => {
 
-    const {mode, port, analyse} = env;
+    const { mode, port, analyse } = env;
 
     const options: TWebpackOptions = {
         mode,
@@ -23,7 +24,7 @@ export default (env: TEnvProps) => {
         port,
         analyse,
     }
- 
+
     const config: webpack.Configuration = wepbackBuilder(options)
     return config;
 };
