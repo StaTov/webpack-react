@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "main": "src/index.tsx",
   "description": "frontend webpack",
   "private": true,
   "browserslist": [

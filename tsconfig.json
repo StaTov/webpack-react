@@ -10,8 +10,12 @@
       "allowJs": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports" : true,
-      "esModuleInterop" : true
+      "esModuleInterop" : true,
+      "baseUrl": ".",
+      "paths": {
+        "src/*": ["./src/*"]
+      }
     },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "custom.d.ts"],
   "exclude": ["node_modules"]
   }
