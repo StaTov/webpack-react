@@ -1,0 +1,10 @@
+.container {
+    font-weight: 900;
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    border: solid 2px rgb(249, 10, 10);
+}
+
+.main {
+    color: rgb(0, 0, 0);
+}

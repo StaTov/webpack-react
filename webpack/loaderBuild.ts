@@ -21,7 +21,9 @@ export const loaderBuilder = ({ mode }: TWebpackOptions): webpack.Configuration[
             {
                 loader: 'css-loader',
                 options: {
-                    modules: true,
+                    modules: {
+                        localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8npm]",
+                    },
                     sourceMap: true
                 }
             },
@@ -61,7 +63,7 @@ export const loaderBuilder = ({ mode }: TWebpackOptions): webpack.Configuration[
         type: 'asset/resource',
     };
 
-    return {rules: [tsxLoader, cssLoader, imgLoader, fontLoader]};
+    return { rules: [tsxLoader, cssLoader, imgLoader, fontLoader] };
 }
 
 export default loaderBuilder;

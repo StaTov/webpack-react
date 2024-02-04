@@ -2,4 +2,5 @@
 /dist
 /.idea
 /build
+/coverage
 
