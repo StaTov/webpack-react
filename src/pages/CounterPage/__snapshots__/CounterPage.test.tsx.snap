@@ -1,18 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App snapshot 1`] = `
+exports[`<CounterPage/> test correct snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
         class="container"
+        data-testid="counter-page"
       >
-        Hello webpack!
         <div
-          class="main"
+          class="value"
+          data-testid="value"
         >
-          i\`m OK
+          <span>
+            value: 
+          </span>
+          0
+        </div>
+        <button
+          data-testid="increment-button"
+        >
+          increment
+        </button>
+        <button
+          data-testid="decrement-button"
+        >
+          decrement
+        </button>
+        <button
+          data-testid="increment-by-amount-button"
+        >
+          increment by amount
+        </button>
+        <input
+          data-testid="input-range"
+          max="100"
+          min="0"
+          type="range"
+          value="0"
+        />
+        <div
+          class="rangeValue"
+          data-testid="value-range"
+        >
+          0
         </div>
       </div>
     </div>
@@ -20,12 +52,44 @@ exports[`App snapshot 1`] = `
   "container": <div>
     <div
       class="container"
+      data-testid="counter-page"
     >
-      Hello webpack!
       <div
-        class="main"
+        class="value"
+        data-testid="value"
       >
-        i\`m OK
+        <span>
+          value: 
+        </span>
+        0
+      </div>
+      <button
+        data-testid="increment-button"
+      >
+        increment
+      </button>
+      <button
+        data-testid="decrement-button"
+      >
+        decrement
+      </button>
+      <button
+        data-testid="increment-by-amount-button"
+      >
+        increment by amount
+      </button>
+      <input
+        data-testid="input-range"
+        max="100"
+        min="0"
+        type="range"
+        value="0"
+      />
+      <div
+        class="rangeValue"
+        data-testid="value-range"
+      >
+        0
       </div>
     </div>
   </div>,
@@ -79,6 +143,13 @@ exports[`App snapshot 1`] = `
   "queryByText": [Function],
   "queryByTitle": [Function],
   "rerender": [Function],
+  "store": {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
   "unmount": [Function],
 }
 `;
