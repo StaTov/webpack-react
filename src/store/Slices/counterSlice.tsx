@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { TCounter } from "../../types/counterType"
+import { TCounter } from "../types/counterType"
 
 const initialState: TCounter = {
     value: 0

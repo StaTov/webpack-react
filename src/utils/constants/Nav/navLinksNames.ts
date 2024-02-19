@@ -1,3 +1,3 @@
-export const COUNTER = 'counter';
-export const ABOUT = 'about';
-export const LIST = 'list';
+export const MAIN = 'main';
+export const FIRST = 'first';
+export const SECOND = 'second';
