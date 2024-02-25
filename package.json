@@ -12,7 +12,6 @@
     "build": "webpack --env mode=production",
     "start": "webpack serve --open --env mode=development",
     "test": "jest",
-    "test-cover": "jest --coverage",
     "prepare": "husky",
     "commitlint": "commitlint --edit  --config commitlint.config.ts"
   },
