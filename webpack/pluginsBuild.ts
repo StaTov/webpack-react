@@ -2,14 +2,18 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import { TWebpackOptions } from "./types";
+import ESLintPlugin from 'eslint-webpack-plugin';
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
-export const pluginBuilder = ({ pathes, mode, analyse }: TWebpackOptions): webpack.Configuration['plugins'] => {
+export const pluginBuilder = ({
+    pathes,
+    mode,
+    analyse }: TWebpackOptions): webpack.Configuration['plugins'] => {
 
     const isDev = mode === 'development';
     const isProd = mode === 'production';
-   
+
     const plugins: webpack.Configuration['plugins'] = [
+
         new HtmlWebpackPlugin({
             title: 'frontend',
             template: pathes.html,
@@ -18,7 +22,7 @@ export const pluginBuilder = ({ pathes, mode, analyse }: TWebpackOptions): webpa
     ];
 
     if (isDev) {
-        plugins.push(new webpack.ProgressPlugin())
+        plugins.push(new webpack.ProgressPlugin(), new ESLintPlugin())
     }
 
     if (isProd) {
@@ -31,7 +35,7 @@ export const pluginBuilder = ({ pathes, mode, analyse }: TWebpackOptions): webpa
     if (analyse) {
         plugins.push(new BundleAnalyzerPlugin())
     }
-    
+
     return plugins;
 };
 

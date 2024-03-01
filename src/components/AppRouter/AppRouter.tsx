@@ -4,10 +4,8 @@ import MainPage from "src/pages/MainPage";
 import { useSuspense } from "src/utils/hooks/useSuspense";
 import { lazy } from "react";
 
-
 const FirstPage = lazy(() => import("src/pages/FirstPage"));
 const SecondPage = lazy(() => import("src/pages/SecondPage"));
-
 
 const AppRouter = () => {
     const {
@@ -22,7 +20,7 @@ const AppRouter = () => {
                 <Route path={second} element={useSuspense(<SecondPage />)} />
             </Route>
         </Routes>
-    )
+    );
 };
 
 export default AppRouter;

@@ -5,7 +5,7 @@ const ErrorComponent = () => {
     <div>
       {ERROR}
     </div>
-  )
+  );
 };
 
 export default ErrorComponent;

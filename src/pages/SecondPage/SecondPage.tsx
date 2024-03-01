@@ -3,7 +3,7 @@ const SecondPage = () => {
         <div>
             Second
         </div>
-    )
+    );
 };
 
 export default SecondPage;

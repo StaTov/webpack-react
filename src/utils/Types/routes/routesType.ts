@@ -1,7 +1,7 @@
 enum ERoutes {
-    MAIN = 'main',
-    FIRST = 'first',
-    SECOND = 'second',
+    MAIN = "main",
+    FIRST = "first",
+    SECOND = "second",
 }
 
 

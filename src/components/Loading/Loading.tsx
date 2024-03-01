@@ -5,7 +5,7 @@ const Loading = () => {
     <div data-testid="loading-page">
       {LOADING}
     </div>
-  )
+  );
 };
 
 export default Loading;

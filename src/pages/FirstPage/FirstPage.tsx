@@ -4,7 +4,7 @@ const FirstPage = () => {
     <div>
       FIRST
     </div>
-  )
+  );
 };
 
 export default FirstPage;

@@ -7,7 +7,7 @@ const Main = () => {
             <Nav />
             <Outlet />
         </div>
-    )
+    );
 };
 
 export default Main;
