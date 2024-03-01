@@ -1,1 +1,1 @@
-# wp-feachers
+# wp-features
