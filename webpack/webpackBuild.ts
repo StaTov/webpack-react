@@ -11,9 +11,9 @@ const wepbackBuilder = (options: TWebpackOptions): webpack.Configuration => {
     const { pathes, mode } = options;
     return {
         mode,
-        entry: './src/index.tsx',
+        entry: "./src/index.tsx",
         output: {
-            filename: '[name].[contenthash].js',
+            filename: "[name].[contenthash].js",
             path: pathes.output,
             clean: true,
         },
@@ -22,7 +22,7 @@ const wepbackBuilder = (options: TWebpackOptions): webpack.Configuration => {
         plugins: pluginBuilder(options),
         module: loaderBuilder(options),
         resolve: resolveBuilder(options),
-    }
-}
+    };
+};
 
 export default wepbackBuilder;

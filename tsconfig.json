@@ -18,18 +18,18 @@
       ]
     }
   },
-"ts-node": {
-  "compilerOptions": {
-    "module": "CommonJS",
- 
-  }
-},
-"include": [
-  "src/**/*.ts",
-  "src/**/*.tsx",
-  "custom.d.ts",
-],
-"exclude": [
-  "node_modules"
-]
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "custom.d.ts",
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

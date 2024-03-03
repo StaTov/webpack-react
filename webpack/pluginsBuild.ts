@@ -2,38 +2,39 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import { TWebpackOptions } from "./types";
-import ESLintPlugin from 'eslint-webpack-plugin';
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+import BundleAnalyzerPlugin from "webpack-bundle-analyzer";
 export const pluginBuilder = ({
     pathes,
     mode,
-    analyse }: TWebpackOptions): webpack.Configuration['plugins'] => {
+    analyse }: TWebpackOptions): webpack.Configuration["plugins"] => {
 
-    const isDev = mode === 'development';
-    const isProd = mode === 'production';
+    const isDev = mode === "development";
+    const isProd = mode === "production";
 
-    const plugins: webpack.Configuration['plugins'] = [
+    const AnalyzerPlugin = BundleAnalyzerPlugin.BundleAnalyzerPlugin;
+    
+    const plugins: webpack.Configuration["plugins"] = [
 
         new HtmlWebpackPlugin({
-            title: 'frontend',
+            title: "frontend",
             template: pathes.html,
             favicon: pathes.favicon
         })
     ];
 
     if (isDev) {
-        plugins.push(new webpack.ProgressPlugin(), new ESLintPlugin())
+        plugins.push(new webpack.ProgressPlugin());
     }
 
     if (isProd) {
         plugins.push(new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css'
-        }))
+            filename: "css/[name].[contenthash:8].css",
+            chunkFilename: "css/[name].[contenthash:8].css"
+        }));
     }
 
     if (analyse) {
-        plugins.push(new BundleAnalyzerPlugin())
+        plugins.push(new AnalyzerPlugin());
     }
 
     return plugins;

@@ -1,17 +1,17 @@
-import type {Config} from 'jest';
+import type {Config} from "jest";
 
 const config: Config = {
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    '!**/node_modules/**',
-    '!**/vendor/**',
-    '!**/constants/**',
-    '!**/types/**',
-    '!**/types.{ts, tsx}',
-    '!src/index.tsx'
+    "src/**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!**/constants/**",
+    "!**/types/**",
+    "!**/types.{ts, tsx}",
+    "!src/index.tsx"
   ],
   // TODO раскомментировать для отслеживания процента покрытия.
   //   coverageThreshold: {
