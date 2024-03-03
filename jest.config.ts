@@ -10,8 +10,7 @@ const config: Config = {
     "!**/vendor/**",
     "!**/constants/**",
     "!**/types/**",
-    "!**/types.{ts, tsx}",
-    "!src/index.tsx"
+    "!**/types.{ts, tsx}"
   ],
   // TODO раскомментировать для отслеживания процента покрытия.
   //   coverageThreshold: {

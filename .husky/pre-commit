@@ -1,3 +1,2 @@
-npm test
-npx eslint-staged
+npm run precommit
 

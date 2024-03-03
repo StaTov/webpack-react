@@ -13,6 +13,7 @@
     "start": "webpack serve --open --env mode=development",
     "test": "jest",
     "prepare": "husky",
+    "precommit": "eslint-staged",
     "lint:fix": "npx eslint . --fix",
     "commitlint": "commitlint --edit  --config commitlint.config.ts"
   },
